@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Convite</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Convite ❤️</title>
 
 <style>
 
@@ -17,43 +17,80 @@
 body{
     height: 100vh;
     overflow: hidden;
-    background: linear-gradient(135deg, #3ab7f1, #469ef0);
+
+    background: linear-gradient(
+        135deg,
+        #89cff0 0%,
+        #b5a8ff 50%,
+        #f8b6d2 100%
+    );
+
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
 }
 
-/* Container principal */
+/* Brilhos do fundo */
+body::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    background-image:
+        radial-gradient(circle, rgba(255,255,255,.8) 2px, transparent 2px),
+        radial-gradient(circle, rgba(255,255,255,.5) 1px, transparent 1px);
+
+    background-size: 120px 120px, 80px 80px;
+    opacity: .5;
+
+    animation: brilho 15s linear infinite;
+}
+
+/* Card principal */
 .container{
     text-align: center;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
-    backdrop-filter: blur(10px);
+
+    background: rgba(255,255,255,0.22);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    border: 1px solid rgba(255,255,255,0.3);
+
     padding: 40px;
-    border-radius: 25px;
+    border-radius: 30px;
+
     width: 90%;
-    max-width: 500px;
-    color: rgb(10, 0, 0);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    max-width: 550px;
+
+    color: #2f2f2f;
+
+    box-shadow:
+        0 20px 40px rgba(0,0,0,.15),
+        0 0 30px rgba(255,255,255,.2);
+
     z-index: 10;
-    animation: aparecer 1.5s ease-in-out;
+
+    animation: aparecer 1.2s ease;
 }
 
 h1{
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     margin-bottom: 20px;
-    color: rgb(0, 0, 0)0, 0;
+    color: #6c4df6;
 }
 
 p{
     font-size: 1.1rem;
-    line-height: 1.7;
-    margin-bottom: 30px;
+    line-height: 1.8;
+    margin-bottom: 25px;
 }
 
 h2{
     margin-bottom: 30px;
     font-size: 1.5rem;
+    color: #4d4d4d;
 }
 
 /* Área dos botões */
@@ -64,31 +101,38 @@ h2{
     margin-top: 20px;
 }
 
-/* Estilo geral dos botões */
+/* Botões */
 .buttons button{
     padding: 15px 25px;
     border-radius: 50px;
     border: none;
     font-size: 1rem;
     cursor: pointer;
-    transition: 0.3s;
+    transition: .3s;
     font-weight: bold;
 }
 
 /* Botão SIM */
 .sim{
-    background: white;
-    color: #00060e;
+    background: linear-gradient(
+        135deg,
+        #ff77b7,
+        #ff4f8b
+    );
+
+    color: white;
+    box-shadow: 0 5px 15px rgba(255,79,139,.4);
 }
 
 .sim:hover{
-    transform: scale(1.1);
+    transform: scale(1.08);
 }
 
 /* Botão NÃO */
 .nao{
-    background: White;
-    color: black;
+    background: white;
+    color: #444;
+    box-shadow: 0 5px 15px rgba(0,0,0,.1);
     position: relative;
 }
 
@@ -96,9 +140,9 @@ h2{
 .mensagem-final{
     display: none;
     margin-top: 25px;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     animation: aparecer 1s ease-in-out;
-    color: rgb(105, 103, 245)1;
+    color: #444;
     font-weight: bold;
 }
 
@@ -107,7 +151,7 @@ h2{
     position: absolute;
     width: 20px;
     height: 20px;
-    background-color: red;
+    background: #ff4f8b;
     transform: rotate(45deg);
     animation: floatUp linear forwards;
 }
@@ -118,7 +162,7 @@ h2{
     position: absolute;
     width: 20px;
     height: 20px;
-    background-color: red;
+    background: #ff4f8b;
     border-radius: 50%;
 }
 
@@ -133,6 +177,16 @@ h2{
 }
 
 /* Animações */
+@keyframes brilho{
+    from{
+        transform: translateY(0);
+    }
+
+    to{
+        transform: translateY(-100px);
+    }
+}
+
 @keyframes floatUp{
     from{
         transform: translateY(0) rotate(45deg);
@@ -148,7 +202,7 @@ h2{
 @keyframes aparecer{
     from{
         opacity: 0;
-        transform: scale(0.8);
+        transform: scale(.8);
     }
 
     to{
@@ -159,6 +213,10 @@ h2{
 
 /* Responsividade */
 @media (max-width: 500px){
+
+    .container{
+        padding: 30px 20px;
+    }
 
     h1{
         font-size: 2rem;
@@ -178,7 +236,7 @@ h2{
     }
 
     .buttons button{
-        width: 80%;
+        width: 90%;
     }
 }
 
@@ -189,28 +247,31 @@ h2{
 
 <div class="container">
 
-    <h1>Oii minha princesa!</h1>
+    <h1>Oii minha princesa! </h1>
 
     <p>
-    Por mais que tente, a opção de "não" não é uma opção válida. Gostaria de te fazer um convite!
+        Por mais que tente, a opção de "não" não é uma opção válida.
+        Gostaria de te fazer um convite. 💕
     </p>
 
     <h2>
-        Você aceita comemorar mais um Dia dos Namorados comigo? ✨
+        Você aceita comemorar mais um dia dos namorados comigo? 
     </h2>
 
     <div class="buttons">
+
         <button class="sim" onclick="aceitou()">
             Com certeza SIM!!! 💕
         </button>
 
         <button class="nao" id="NoBtn">
-            não
+            Não
         </button>
+
     </div>
 
-    <div class="mensagem-final" id="mensagemfinal">
-    É claro que aceita KKKKKKK ❤️ <br><br>
+    <div class="mensagem-final" id="mensagemFinal">
+        É claro que aceita KKKKKKK <br><br>
         Você não vive sem mim! 😘
     </div>
 
@@ -219,15 +280,15 @@ h2{
 <script>
 
 const noBtn = document.getElementById('NoBtn');
-const mensagemFinal = document.getElementById('mensagemfinal');
+const mensagemFinal = document.getElementById('mensagemFinal');
 
 /* Botão fugindo */
 noBtn.addEventListener('mouseover', () => {
 
-    alert('Eu avisei, não é uma opção!!');
+    alert('Eu avisei! Não é uma opção válida 😝');
 
-    const randomX = Math.floor(Math.random() * (window.innerWidth - 100));
-    const randomY = Math.floor(Math.random() * (window.innerHeight - 50));
+    const randomX = Math.floor(Math.random() * (window.innerWidth - 120));
+    const randomY = Math.floor(Math.random() * (window.innerHeight - 80));
 
     noBtn.style.position = 'absolute';
     noBtn.style.left = `${randomX}px`;
@@ -239,7 +300,7 @@ function aceitou(){
 
     mensagemFinal.style.display = 'block';
 
-    for(let i = 0; i < 40; i++){
+    for(let i = 0; i < 50; i++){
 
         const heart = document.createElement('div');
 
@@ -260,5 +321,6 @@ function aceitou(){
 }
 
 </script>
+
 </body>
 </html>

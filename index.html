@@ -17,7 +17,7 @@
 body{
     height: 100vh;
     overflow: hidden;
-    background: linear-gradient(135deg, #f5c6e0, #f8b195);
+    background: linear-gradient(135deg, #3ab7f1, #469ef0);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -27,7 +27,7 @@ body{
 /* Container principal */
 .container{
     text-align: center;
-    background: rgba(255, 255, 255, 0.8);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
     backdrop-filter: blur(10px);
     padding: 40px;
     border-radius: 25px;
@@ -42,7 +42,7 @@ body{
 h1{
     font-size: 2.5rem;
     margin-bottom: 20px;
-    color: #ff6f91;
+    color: rgb(0, 0, 0)0, 0;
 }
 
 p{
@@ -78,7 +78,7 @@ h2{
 /* Botão SIM */
 .sim{
     background: white;
-    color: #ff6f91;
+    color: #00060e;
 }
 
 .sim:hover{
@@ -87,8 +87,8 @@ h2{
 
 /* Botão NÃO */
 .nao{
-    background: #ff6f91;
-    color: white;
+    background: White;
+    color: black;
     position: relative;
 }
 
@@ -98,7 +98,7 @@ h2{
     margin-top: 25px;
     font-size: 1.3rem;
     animation: aparecer 1s ease-in-out;
-    color: #ff4f7b;
+    color: rgb(105, 103, 245)1;
     font-weight: bold;
 }
 
@@ -189,12 +189,10 @@ h2{
 
 <div class="container">
 
-    <h1>Oii minha Princesa! 💖</h1>
+    <h1>Oii minha princesa!</h1>
 
     <p>
-        Eu não sei me expressar muito bem em palavras,
-        mas quero que saiba que amo muito você
-        e gostaria de te fazer um convite!
+    Por mais que tente, a opção de "não" não é uma opção válida. Gostaria de te fazer um convite!
     </p>
 
     <h2>
@@ -203,7 +201,7 @@ h2{
 
     <div class="buttons">
         <button class="sim" onclick="aceitou()">
-            SIM!!! 💕
+            Com certeza SIM!!! 💕
         </button>
 
         <button class="nao" id="NoBtn">
@@ -213,8 +211,7 @@ h2{
 
     <div class="mensagem-final" id="mensagemfinal">
     É claro que aceita KKKKK ❤️ <br><br>
-        Se prepare para ter uma noite incrível,
-        afinal... você estará comigo! 😘
+        Você não vive sem mim! 😘
     </div>
 
 </div>
@@ -227,7 +224,7 @@ const mensagemFinal = document.getElementById('mensagemfinal');
 /* Botão fugindo */
 noBtn.addEventListener('mouseover', () => {
 
-    alert('Não é uma opção 😌💖');
+    alert('Eu avisei, não é uma opção!! 😌');
 
     const randomX = Math.floor(Math.random() * (window.innerWidth - 100));
     const randomY = Math.floor(Math.random() * (window.innerHeight - 50));
